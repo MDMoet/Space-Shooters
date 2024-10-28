@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="Space_Shooters.views.Inventory"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:local="clr-namespace:Space_Shooters"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+ xmlns:classes="clr-namespace:Space_Shooters.classes"
+ d:DataContext="{d:DesignInstance Type=classes:ViewHandler}"
+ mc:Ignorable="d"
+  d:DesignHeight="450" d:DesignWidth="800">
+    <!-- Define Resources for common styles -->
+    <UserControl.Resources>
+        <!-- Common Font and Stroke Style for OutlinedTextControl -->
+        <Style x:Key="OutlinedTextStyle" TargetType="{x:Type local:OutlinedTextControl}">
+            <Setter Property="FontFamily" Value="{StaticResource Montserrat Text}" />
+            <Setter Property="Stroke" Value="#DFC900" />
+            <Setter Property="StrokeThickness" Value="2.5" />
+        </Style>
+
+        <!-- Reduced StrokeThickness for Stats Title -->
+        <Style x:Key="StatsTitleStyle" TargetType="{x:Type local:OutlinedTextControl}" BasedOn="{StaticResource OutlinedTextStyle}">
+            <Setter Property="StrokeThickness" Value="2" />
+        </Style>
+
+        <!-- Common Width and Height for Border -->
+        <Style x:Key="CommonBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="BorderBrush" Value="#DFC900" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <!-- Common Width and Height for Border -->
+        <Style x:Key="CommonButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="BorderBrush" Value="#DFC900" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Margin" Value="0,0,0,8" />
+            <Setter Property="Width" Value="250" />
+            <Setter Property="Height" Value="20" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Column="1">
+            <StackPanel>
+                <Viewbox Margin="0,10,0,10" HorizontalAlignment="Center" >
+                    <local:OutlinedTextControl Text="Inventory" Width="190" FontSize="30" Style="{StaticResource OutlinedTextStyle}" FontFamily="{StaticResource Montserrat Title}" StrokeThickness="1.5" HorizontalAlignment="Center" />
+                </Viewbox>
+                <Border Width="500" Height="380" Background="Black" Margin="0,0,0,25" Style="{StaticResource CommonBorderStyle}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            
+                            <Grid Margin="30,20,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Viewbox Margin="0,0,0,5" HorizontalAlignment="Center" >
+                                    <local:OutlinedTextControl Text="Items:" Width="65" FontSize="20" Style="{StaticResource OutlinedTextStyle}" StrokeThickness="1.5" HorizontalAlignment="Center" />
+                                </Viewbox>
+                                <Border x:Name="boItemInventory" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="169" Grid.RowSpan="10" Style="{StaticResource CommonBorderStyle}">
+                                  
+                                </Border>
+                            </Grid>
+
+                            <StackPanel>
+                                <Grid Margin="20,20,0,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="1*" />
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Viewbox Margin="0,0,0,5" HorizontalAlignment="Center" >
+                                        <local:OutlinedTextControl Text="Equipment:" Width="125" FontSize="20" Style="{StaticResource OutlinedTextStyle}" StrokeThickness="1.5" HorizontalAlignment="Center" />
+                                    </Viewbox>
+                                    
+                                    <Border x:Name="boEquipmentInventory" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="250" Height="260" Grid.RowSpan="1" Style="{StaticResource CommonBorderStyle}">
+
+                                    </Border>
+                                </Grid>
+
+                                <Button Width="251" Height="25" Name="btReturn" Click="Return"  Style="{StaticResource CommonButtonStyle}" Cursor="Hand" Margin="20,4,0,0">
+                                    <Viewbox>
+                                        <local:OutlinedTextControl Text="Return" Width="80" Height="30" FontSize="23" Style="{StaticResource OutlinedTextStyle}" StrokeThickness="1.5" Margin="0,5,0,0" />
+                                    </Viewbox>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</UserControl>

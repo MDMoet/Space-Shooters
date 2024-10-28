@@ -1,0 +1,6 @@
+﻿<!-- ResourceDictionary.xaml -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="Montserrat Text">/fonts/#Montserrat SemiBold</FontFamily>
+    <FontFamily x:Key="Montserrat Title">/fonts/#Montserrat Subrayada</FontFamily>
+</ResourceDictionary>

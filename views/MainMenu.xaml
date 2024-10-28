@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Space_Shooters.views.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Space_Shooters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:classes="clr-namespace:Space_Shooters.classes" d:DataContext="{d:DesignInstance Type=classes:ViewHandler}"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="1">
+            <StackPanel>
+                <Viewbox Margin="0,60,0,90">
+                    <local:OutlinedTextControl Text="Space Shooters" FontSize="48" FontFamily="{StaticResource Montserrat Title}" Stroke="#DFC900" StrokeThickness="2" />
+                </Viewbox>
+                <Button Name="btPlay" Click="PlayGame" Width="300" Height="25" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" Cursor="Hand">
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Play" Height="30" FontSize="22" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" HorizontalAlignment="Center" Margin="0,3,0,0" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btCharacter" Click="Character" Width="300" Height="20" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" Cursor="Hand">
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Character" FontSize="24" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btInventory" Click="Inventory" Width="300" Height="20" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" Cursor="Hand">
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Inventory" FontSize="24" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btItemShop" Click="ItemShop" Width="300" Height="20" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" Cursor="Hand">
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Item Shop" FontSize="24" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btSettings" Click="Settings" Width="300" Height="20" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" Cursor="Hand">
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Settings" FontSize="24" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btExitToDesktop" Click="ExitToDesktop" Width="300" Height="20" Background="Black" BorderBrush="#DFC900" Margin="0,0,0,8" >
+                    <Viewbox>
+                        <local:OutlinedTextControl Text="Exit to desktop" FontSize="24" FontFamily="{StaticResource Montserrat Text}" Stroke="#DFC900" StrokeThickness="2" />
+                    </Viewbox>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox VerticalAlignment="Bottom" Grid.Column="0">
+            <TextBlock x:Name="tbVersion" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Text="Version: 1.0" Width="150" FontFamily="inter" Opacity="0.6" Foreground="#DFC900" Cursor="Hand"/>
+        </Viewbox>
+    </Grid>
+</UserControl>
