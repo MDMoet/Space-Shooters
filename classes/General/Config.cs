@@ -42,7 +42,7 @@ namespace Space_Shooters.classes.General
                 Progression_Requirement_Multiplier = 1.4,
                 Difficulty_Factor_Increase = 1.3,
                 Difficulty = 1,
-                ConnectionString = "server=127.0.0.1;database=space_shooters;uid=root;sslmode=none"
+                ConnectionString = "server=192.168.178.204;database=space_shooters;uid=ps250444;pwd=G7!rE2@9wN^zX3#jU1*QkT5&fL0$;"
             };
             var configPart2 = new
             {
