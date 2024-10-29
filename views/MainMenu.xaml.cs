@@ -31,10 +31,6 @@ namespace Space_Shooters.views
         {
             InitializeComponent();
             tbVersion.Text = "Version: " + Assembly.GetExecutingAssembly().GetName().Version;
-            if (Config.Configuration.AllowCommandPrompt)
-            {
-                tbVersion.Text += " (Admin)";
-            }
             this.VarViewHandler = VarViewHandler;
         }
         public void PlayGame(object sender, RoutedEventArgs e)
