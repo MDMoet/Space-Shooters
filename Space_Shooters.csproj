@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>img\User_Default.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -42,6 +43,10 @@
     <None Remove="img\skins\User_Skins\User_Default.png" />
     <None Remove="img\skins\User_Skins\w3ci6oxz.png" />
     <None Remove="img\Space_Background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="img\User_Default.ico" />
   </ItemGroup>
 
   <ItemGroup>
