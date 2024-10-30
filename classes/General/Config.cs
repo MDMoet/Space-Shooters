@@ -198,7 +198,6 @@ namespace Space_Shooters.classes.General
                 string envPassword = Environment.GetEnvironmentVariable(EnvVariableKey);
                 if (string.IsNullOrEmpty(envPassword))
                 {
-                    MessageBox.Show("Environment variable for decryption key is missing.");
                     return string.Empty;
                 }
 
